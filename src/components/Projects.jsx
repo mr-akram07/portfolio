@@ -1,6 +1,6 @@
 // Projects.jsx
 
-import ProjectCard from "./ProjectCard"; // Make sure the path is correct
+import ProjectCard from "./ProjectCard.jsx"; // Make sure the path is correct
 
 function Projects({ projects }) {
   return (
