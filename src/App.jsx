@@ -5,20 +5,20 @@ import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
 
 // Import Components
-import FloatingSocialButtons from './Components/Socialbutton'
-import FloatingContactButtons from './Components/ContButton'
-import Navbar from './Components/Navbar'
-import Hero from './Components/Hero'
-import Skills from './Components/Skills'
-import Expertise from './Components/Expertise'
-import Projects from './Components/Projects'
-import Designs from './Components/DesignSample'
-import About from './Components/About'
-import Contact from './Components/Contact'
-import Footer from './Components/Footer'
+import FloatingSocialButtons from './Components/Socialbutton.jsx'
+import FloatingContactButtons from './Components/ContButton.jsx'
+import Navbar from './Components/Navbar.jsx'
+import Hero from './Components/Hero.jsx'
+import Skills from './Components/Skills.jsx'
+import Expertise from './Components/Expertise.jsx'
+import Projects from './Components/Projects.jsx'
+import Designs from './Components/DesignSample.jsx'
+import About from './Components/About.jsx'
+import Contact from './Components/Contact.jsx'
+import Footer from './Components/Footer.jsx'
 
 // Import Data
-import { skills, projects, codeLines, designSamples, expertise,} from "../data"; // Assuming data.js is in the same directory or adjust path
+import { skills, projects, codeLines, designSamples, expertise,} from "../data.js"; // Assuming data.js is in the same directory or adjust path
 
 export default function Portfolio() {
   const [showSocial, setShowSocial] = useState(false);  
