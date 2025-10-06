@@ -1,27 +1,27 @@
 // App.jsx (The Main Component)
-
+import './App.css'
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
 
 // Import Components
-import Navbar from "./components/Navbar";
-import FloatingSocialButtons from "./components/SocialButton";
-import Hero from "./components/Hero";
-import AboutSkills from "./components/AboutSkills";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import FloatingSocialButtons from './Components/Socialbutton'
+import FloatingContactButtons from './Components/ContButton'
+import Navbar from './Components/Navbar'
+import Hero from './Components/Hero'
+import Skills from './Components/Skills'
+import Expertise from './Components/Expertise'
+import Projects from './Components/Projects'
+import Designs from './Components/DesignSample'
+import About from './Components/About'
+import Contact from './Components/Contact'
+import Footer from './Components/Footer'
 
 // Import Data
-import { skills, projects, codeLines, rolesData } from "../data"; // Assuming data.js is in the same directory or adjust path
-import ContactButtons from "./components/ContButton";
-import FloatingContactButtons from "./components/ContButton";
-import RoleBadges from "./components/Rolebadges";
+import { skills, projects, codeLines, designSamples, expertise,} from "../data"; // Assuming data.js is in the same directory or adjust path
 
 export default function Portfolio() {
-  const [showSocial, setShowSocial] = useState(false);
-  const [showContact, setShowContact] = useState(false);
+  const [showSocial, setShowSocial] = useState(false);  
   const [mobileMenu, setMobileMenu] = useState(false);
 
 
@@ -41,11 +41,6 @@ export default function Portfolio() {
 
       <FloatingContactButtons/>
 
-      <ContactButtons
-        showContact={showContact}
-        setShowContact={setShowContact}
-      />
-
       <Navbar
         mobileMenu={mobileMenu}
         setMobileMenu={setMobileMenu}
@@ -53,9 +48,11 @@ export default function Portfolio() {
 
       <main>
         <Hero codeLines={codeLines} />
-        <RoleBadges rolesData={rolesData} />
-        <AboutSkills skills={skills} />
+        <Skills skills={skills} />
+        <Expertise expertise={expertise} />
         <Projects projects={projects} />
+        <Designs samples={designSamples}/>
+        <About />
         <Contact />
       </main>
 

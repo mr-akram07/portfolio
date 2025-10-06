@@ -1,11 +1,11 @@
 // FloatingContactButtons.jsx
 
-import { FaPhoneAlt, FaWhatsapp, FaComments, FaTimes } from "react-icons/fa";
+import { FaPhoneAlt, FaWhatsapp, FaTimes } from "react-icons/fa";
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoCallOutline } from "react-icons/io5";
 
-export default function FloatingContactButtons() {
+function FloatingContactButtons() {
     const [isOpen, setIsOpen] = useState(false);
     const socialRef = useRef(null);
 
@@ -43,19 +43,19 @@ export default function FloatingContactButtons() {
                         href="https://wa.me/919336440702?text=Hello%20I%20want%20to%20connect%20with%20you!"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition transform hover:scale-110"
+                        className="mr-1 bg-black text-green-500 p-2 rounded-full shadow-lg hover:bg-green-500 hover:text-black transition transform hover:scale-110"
                         title="Chat on WhatsApp"
                     >
-                        <FaWhatsapp size={16} />
+                        <FaWhatsapp size={26} />
                     </a>
 
                     {/* Call Button */}
                     <a
                         href="tel: +919336440702"
-                        className="bg-blue-500 text-white p-4 rounded-full shadow-lg hover:bg-blue-600 transition transform hover:scale-110"
+                        className="mr-1 bg-black text-green-500 p-3 rounded-full shadow-lg hover:bg-green-500 hover:text-black transition transform hover:scale-110"
                         title="Call Me"
                     >
-                        <FaPhoneAlt size={16} />
+                        <FaPhoneAlt size={18} />
                     </a>
                 </motion.div>
                 )}
@@ -67,12 +67,14 @@ export default function FloatingContactButtons() {
                     e.stopPropagation();
                     setIsOpen(!isOpen);
                 }}
-                className={`text-white p-4 rounded-full shadow-lg transition transform hover:scale-110 ${isOpen ? 'bg-red-500 hover:bg-red-600 rotate-180' :  'backdrop-blur-xs bg-blue-500/20 hover:bg-blue-700'
+                className={`text-white p-2 mr-1 rounded-full shadow-lg transition transform hover:scale-110 ${isOpen ? 'bg-red-500 hover:bg-red-600 rotate-180 hover:text-black' :  'backdrop-blur-xs bg-blue-500/20 hover:bg-blue-700 hover:text-black'
                     }`}
                 title={isOpen ? "Close Contact Options" : "Open Contact Options"}
             >
-                {isOpen ? <FaTimes size={16} /> : <IoCallOutline size={16} />}
+                {isOpen ? <FaTimes size={26} /> : <IoCallOutline size={26} />}
             </button>
         </div>
     );
 }
+
+export default FloatingContactButtons

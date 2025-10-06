@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-export default function Hero({ codeLines }) {
+function Hero({ codeLines }) {
   const [typedText, setTypedText] = useState('');
   const [lineIndex, setLineIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
@@ -34,10 +34,9 @@ export default function Hero({ codeLines }) {
     <section id="home" className="flex flex-col md:flex-row items-center justify-center min-h-[70vh] bg-gray-900 px-6 md:px-20 pt-20 md:pt-0 relative overflow-hidden transition-colors" data-aos="zoom-in">
         
       {/* Background gradient lines */}
-      <div className="absolute left-1/2 top-0 h-full w-px bg-gradient-to-b from-blue-500/0 via-blue-500/50 to-blue-500/0 z-0"></div>
       <div className="absolute right-1/4 top-0 h-full w-px bg-gradient-to-b from-purple-500/0 via-purple-500/30 to-purple-500/0 z-0 hidden md:block"></div>
 
-      <div className="flex flex-col items-center md:items-start md:w-1/2 space-y-4 relative z-10">
+      <div className="flex flex-col items-center md:items-start md:w-1/2 space-y-4 relative z-10 ">
         
         {/* Profile Image Wrapper with Glowing Border Effect */}
         <div className="relative p-1 rounded-full bg-gradient-to-tr from-blue-500 to-purple-600 animate-spin-slow">
@@ -52,10 +51,15 @@ export default function Hero({ codeLines }) {
           {/* Inner Ring Glow */}
           <div className="absolute inset-0 rounded-full shadow-2xl shadow-blue-500/50 mix-blend-overlay"></div>
         </div>
+        <div className="flex flex-col gap-2 md:flex-row md:gap-x-3 mb-4">
+          <span className="border rounded-full px-3 border-blue-400 backdrop-blur-sm bg-white/10 font-bold">Web Developer • Graphic Designer</span>
+          <span className="border rounded-full px-3 border-blue-400 backdrop-blur-sm bg-white/10 font-bold">Sant Kabir Nagar • India</span>
+          <span className="border rounded-full px-3 border-blue-400 backdrop-blur-sm bg-white/10 font-bold">Since 2025</span>
+        </div>
         
         <motion.div className="text-center md:text-left" initial={{ x: -50, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1 }}>
           <h1 className="text-4xl md:text-5xl font-bold mb-2">Hi, I'm Mohd Akram</h1>
-          <p className="text-lg md:text-xl text-blue-400 mb-4">BCA 2nd Year | Aspiring MERN Stack Developer</p>
+          <p className="text-lg md:text-xl text-blue-400 mb-4">BCA 2nd Year | Aspiring MERN Stack Developer | Graphic Designer</p>
         </motion.div>
       </div>
       <div className="md:w-1/2 md:pl-10 w-full mb-6 md:mb-0 relative z-10">
@@ -67,3 +71,6 @@ export default function Hero({ codeLines }) {
     </section>
   );
 }
+
+
+export default Hero
