@@ -1,6 +1,6 @@
 // DesignPortfolio.jsx
 
-import DesignCard from "./DesignCard";
+import DesignCard from "./DesignCard.jsx";
 
 function Designs({ samples }) {
   return (
