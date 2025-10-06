@@ -20,7 +20,7 @@ function Expertise({ expertise }) {
                         });
 
                         return (
-                            <div key={i} ref={ref} className="hover:scale-101 bg-gray-700/50 p-4 rounded-2xl hover:border border-gray-300/30 backdrop-blur-md">
+                            <div key={i} ref={ref} className="hover:scale-101 bg-gray-700/50 p-4 rounded-2xl hover:border border-gray-300/30 backdrop-blur-md" data-aos="fade-up">
                                 <div className="flex justify-between mb-1 ">
                                     <span className="font-medium">{expert.name}</span>
                                     <span>{expert.percent}%</span>

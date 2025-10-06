@@ -45,6 +45,7 @@ export const skills = [
 
 export const projects = [
   { title: "Portfolio Website", link: "", desc: "A personal portfolio built with React and Tailwind CSS.", image: "./test.png", tags: ["Resume", "Branding"], },
+  { title: "Portfolio Website", link: "", desc: "A personal portfolio built with React and Tailwind CSS.", image: "./test.png", tags: ["Resume", "Branding"], },
   
 ];
 

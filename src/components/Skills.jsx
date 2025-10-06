@@ -28,6 +28,7 @@ function Skills({ skills }) {
               key={index}
               className="bg-gray-800 p-6 rounded-xl shadow-2xl border border-gray-700/70 hover:border-blue-500 transition duration-300 transform hover:scale-[1.02] flex flex-col justify-between"
               ref={ref}
+              data-aos="fade-up"
             >
               <div>  {/* Icon and Description Container */}
                 <div className={`text-4xl mb-4 ${skill.color}`}>
