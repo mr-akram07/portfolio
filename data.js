@@ -75,6 +75,6 @@ export const ResumeData = {
   ],
   experience: [
     { role: 'Graphic Designer', company: 'Freelancer', year: 'April 2025 - Present' },
-    { role: 'Web Developer', company: 'Freelancer', year: 'October 2025 - Present' },
+    { role: 'Front End Developer', company: 'Freelancer', year: 'October 2025 - Present' },
   ]
 };

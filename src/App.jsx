@@ -5,21 +5,21 @@ import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
 
 // Import Components
-import FloatingSocialButtons from './Components/Socialbutton.jsx'
-import FloatingContactButtons from './Components/ContButton.jsx'
-import Navbar from './Components/Navbar.jsx'
-import Hero from './Components/Hero.jsx'
-import Skills from './Components/Skills.jsx'
-import Expertise from './Components/Expertise.jsx'
-import Projects from './Components/Projects.jsx'
-import Designs from './Components/DesignSample.jsx'
-import About from './Components/About.jsx'
-import Contact from './Components/Contact.jsx'
-import Footer from './Components/Footer.jsx'
+import FloatingSocialButtons from './components/Socialbutton.jsx'
+import FloatingContactButtons from './components/ContButton.jsx'
+import Navbar from './components/Navbar.jsx'
+import Hero from './components/Hero.jsx'
+import Skills from './components/Skills.jsx'
+import Expertise from './components/Expertise.jsx'
+import Projects from './components/Projects.jsx'
+import Designs from './components/DesignSample.jsx'
+import About from './components/About.jsx'
+import Contact from './components/Contact.jsx'
+import Footer from './components/Footer.jsx'
+import Resume from './components/Resume.jsx';
 
 // Import Data
 import { skills, projects, codeLines, designSamples, expertise, ResumeData,} from "../data.js"; // Assuming data.js is in the same directory or adjust path
-import Resume from './components/Resume.jsx';
 
 export default function Portfolio() {
   const [showSocial, setShowSocial] = useState(false);  
