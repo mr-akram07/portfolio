@@ -33,7 +33,7 @@ function Navbar({ mobileMenu, setMobileMenu }) {
         </ul>
         <div className="md:hidden lg:hidden flex items-center space-x-2">
           {/* Mobile Resume Button (Always Visible) */}
-          <a href="#notuploaded" className="bg-sky-500 text-white p-2 text-sm text-center rounded-md px-3 font-semibold hover:bg-sky-600 transition duration-300" > Resume </a>
+          <a href="#resume" className="bg-sky-500 text-white p-2 text-sm text-center rounded-md px-3 font-semibold hover:bg-sky-600 transition duration-300" > Resume </a>
 
           {/* Mobile Menu Toggle Button */}
           <button className="p-2 text-gray-100 hover:text-blue-400 transition" onClick={() => setMobileMenu(!mobileMenu)}> {mobileMenu ? <FaTimes size={24} /> : <FaBars size={24} />} </button>
