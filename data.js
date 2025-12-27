@@ -56,6 +56,7 @@ export const codeLines = [
 ];
 
 export const designSamples = [
+  { title: "Election Poster",  desc: "A Poster to promote the Election Compaign.", image: "./Poster.png", link: "./Poster.png",  tags: ["Banner", "Election Poster","New Year Poster"], },
   { title: "Photo Frame",  desc: "An image is edited for hold in a frame.", image: "./Teacher Day.png", link: "./Teacher Day.png",  tags: ["Frame", "Teacher's Day","Image"], },
   { title: "Shop Banner",  desc: "A banner for the shop recognition.", image: "./Banner.png", link: "./Banner.png",  tags: ["Shop Banner", "Poster"], },
   { title: "Admission Brochure",  desc: "An Admission Brochure used for all the details of the course.", image: "./Admission.png", link: "./Admission.png",  tags: ["Admission Card", "Brochure", "Designs"], },
