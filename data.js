@@ -44,6 +44,7 @@ export const skills = [
 ];
 
 export const projects = [
+  { title: "MCQ Test Website", link: "https://ccc-blush.vercel.app/", desc: "A website is created for a preparation of any MCQ exam which is managed by admin.", image: "./CCC.png", tags: ["Exam Preparation", "MCQ Tests", "Quick Mock Tests"], },
   { title: "Portfolio Website", link: "", desc: "A personal portfolio built with React and Tailwind CSS.", image: "./test.png", tags: ["Resume", "Branding"], },
   
 ];
