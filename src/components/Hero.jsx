@@ -51,7 +51,7 @@ function Hero({ codeLines }) {
           {/* Inner Ring Glow */}
           <div className="absolute inset-0 rounded-full shadow-2xl shadow-blue-500/50 mix-blend-overlay"></div>
         </div>
-        <div className="flex flex-col gap-2 md:flex-row md:gap-x-3 mb-4">
+        <div className="flex flex-wrap gap-2 md:flex-row md:gap-x-3 mb-4">
           <span className="border rounded-full px-3 border-blue-400 backdrop-blur-sm bg-white/10 font-bold">Web Developer • Graphic Designer</span>
           <span className="border rounded-full px-3 border-blue-400 backdrop-blur-sm bg-white/10 font-bold">Sant Kabir Nagar • India</span>
           <span className="border rounded-full px-3 border-blue-400 backdrop-blur-sm bg-white/10 font-bold">Since 2025</span>
