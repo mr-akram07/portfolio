@@ -59,7 +59,7 @@ function Hero({ codeLines }) {
         
         <motion.div className="text-center md:text-left" initial={{ x: -50, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1 }}>
           <h1 className="text-4xl md:text-5xl font-bold mb-2">Hi, I'm Mohd Akram</h1>
-          <p className="text-lg md:text-xl text-blue-400 mb-4">BCA 2nd Year | Aspiring MERN Stack Developer | Graphic Designer</p>
+          <p className="text-lg md:text-xl text-blue-400 mb-4">BCA 3rd Year | MERN Stack Developer | Graphic Designer</p>
         </motion.div>
       </div>
       <div className="md:w-1/2 md:pl-10 w-full mb-6 md:mb-0 relative z-10">

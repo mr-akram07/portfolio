@@ -71,7 +71,7 @@ export const ResumeData = {
   summary: "Passionate web developer with experience in creating responsive, user-friendly websites using modern technologies. Skilled in React, JavaScript, and UI/UX design, aiming to deliver high-quality solutions and innovative projects.",
   education: [
     { degree: 'MERN Stack Development', institution: 'Hareetech Development Pvt. Ltd.', year: 'August 2025 - September 2025' },
-    { degree: 'Bachelor in Computer Applications (BCA)', institution: 'Hiralal Ramniwas P. G. College', year: '2024 - Present' },
+    { degree: 'Bachelor in Computer Applications (BCA)', institution: 'Hiralal Ramniwas P. G. College', year: 'Pursuing' },
     { degree: 'Diploma in Computer Applications (DCA)', institution: 'Lucknow Computer & Technical Institute', year: '2023 - 2024' },
     { degree: 'Intermediate', institution: 'Hiralal Ramniwas Inter College', year: '2021 - 2023' },
     { degree: 'High School', institution: 'Hiralal Ramniwas Inter College', year: '2019 - 2021' },
