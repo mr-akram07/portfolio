@@ -1,17 +1,12 @@
 // Resume.jsx
 import React from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { FaGraduationCap, FaBriefcase, FaDownload, FaUser } from 'react-icons/fa';
+import { FaGraduationCap, FaBriefcase, FaDownload } from 'react-icons/fa';
 import { MdSummarize } from 'react-icons/md';
 import { GoDotFill } from 'react-icons/go';
 
 export default function Resume({ResumeData}) {
-  React.useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);
-
   const { summary, education, experience } = ResumeData;
+
 
   return (
     <section id="resume" className="relative-container md:space-x-10 px-6 py-10 overflow-hidden bg-gray-900 backdrop-blur-sm flex-col border-t border-b border-gray-700 relative transition-colors" data-aos="fade-up">

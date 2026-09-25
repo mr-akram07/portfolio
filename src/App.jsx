@@ -26,10 +26,11 @@ export default function Portfolio() {
   const [mobileMenu, setMobileMenu] = useState(false);
 
 
-  // Initialize AOS
+  // Initialize AOS with optimized settings for smooth performance
   useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
+    AOS.init({ duration: 600, once: true, offset: 40, throttleDelay: 99, debounceDelay: 50 });
   }, []);
+
 
   return (
     <div className="min-h-screen relative

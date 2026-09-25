@@ -16,46 +16,49 @@ function FloatingContactButtons() {
                 setIsOpen(false);
             }
         };
-        document.addEventListener("click", handleClickOutside);
+        document.addEventListener("click", handleClickOutside, { passive: true });
         return () => document.removeEventListener("click", handleClickOutside);
     }, [setIsOpen]);
 
-    // Auto close social on scroll
+    // Auto close social on scroll (only when isOpen is true)
     useEffect(() => {
+        if (!isOpen) return;
         const handleScroll = () => setIsOpen(false);
-        window.addEventListener("scroll", handleScroll);
+        window.addEventListener("scroll", handleScroll, { passive: true });
         return () => window.removeEventListener("scroll", handleScroll);
-    }, [setIsOpen]);
+    }, [isOpen, setIsOpen]);
 
     return (
-        <div className="fixed right-4 bottom-4 z-50 flex flex-col items-end space-y-3" ref={socialRef}>
+        <div className="fixed right-4 bottom-4 z-50 flex flex-col items-end space-y-3 will-change-transform" ref={socialRef}>
 
             <AnimatePresence>
                 {isOpen && (<motion.div
-                    initial={{ opacity: 0, y: 50, scale: 0.8 }}
+                    initial={{ opacity: 0, y: 20, scale: 0.9 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: 50, scale: 0.8 }}
-                    transition={{ duration: 0.25, ease: "easeInOut" }}
-                    className="flex flex-col items-end space-y-3"
+                    exit={{ opacity: 0, y: 20, scale: 0.9 }}
+                    transition={{ duration: 0.2, ease: "easeOut" }}
+                    className="flex flex-col items-end space-y-3 transform-gpu"
                 >
                     {/* WhatsApp Button */}
                     <a
                         href="https://wa.me/919336440702?text=Hello%20I%20want%20to%20connect%20with%20you!"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="mr-1 bg-black text-green-500 p-2 rounded-full shadow-lg hover:bg-green-500 hover:text-black transition transform hover:scale-110"
+                        className="mr-1 bg-gray-900 text-green-400 p-2.5 rounded-full shadow-lg hover:bg-green-500 hover:text-black transition duration-200 transform-gpu hover:scale-110"
                         title="Chat on WhatsApp"
+                        aria-label="WhatsApp"
                     >
-                        <FaWhatsapp size={26} />
+                        <FaWhatsapp size={24} />
                     </a>
 
                     {/* Call Button */}
                     <a
-                        href="tel: +919336440702"
-                        className="mr-1 bg-black text-green-500 p-3 rounded-full shadow-lg hover:bg-green-500 hover:text-black transition transform hover:scale-110"
+                        href="tel:+919336440702"
+                        className="mr-1 bg-gray-900 text-blue-400 p-3 rounded-full shadow-lg hover:bg-blue-500 hover:text-white transition duration-200 transform-gpu hover:scale-110"
                         title="Call Me"
+                        aria-label="Call"
                     >
-                        <FaPhoneAlt size={18} />
+                        <FaPhoneAlt size={16} />
                     </a>
                 </motion.div>
                 )}
@@ -65,16 +68,17 @@ function FloatingContactButtons() {
             <button
                 onClick={(e) => {
                     e.stopPropagation();
-                    setIsOpen(!isOpen);
+                    setIsOpen((prev) => !prev);
                 }}
-                className={`text-white p-2 mr-1 rounded-full shadow-lg transition transform hover:scale-110 ${isOpen ? 'bg-red-500 hover:bg-red-600 rotate-180 hover:text-black' :  'backdrop-blur-xs bg-blue-500/20 hover:bg-blue-700 hover:text-black'
+                className={`text-white p-3 mr-1 rounded-full shadow-lg transition duration-200 transform-gpu hover:scale-110 ${isOpen ? 'bg-red-500 hover:bg-red-600 rotate-180 text-white' : 'bg-blue-600 hover:bg-blue-500 text-white'
                     }`}
                 title={isOpen ? "Close Contact Options" : "Open Contact Options"}
+                aria-label="Contact Toggle"
             >
-                {isOpen ? <FaTimes size={26} /> : <IoCallOutline size={26} />}
+                {isOpen ? <FaTimes size={22} /> : <IoCallOutline size={22} />}
             </button>
         </div>
     );
 }
 
-export default FloatingContactButtons
+export default FloatingContactButtons;
