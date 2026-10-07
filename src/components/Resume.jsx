@@ -67,7 +67,7 @@ export default function Resume({ResumeData}) {
 
       {/* Download Button */}
       <div className="text-center mt-10">
-        <a href="https://drive.google.com/file/d/1v-0UdUPUq8kJ2K9TQ4v5Vb0vWMvOpTxL/view?usp=sharing" className="px-8 py-3 bg-blue-500 text-white rounded-full shadow hover:bg-blue-600 transition flex items-center justify-center mx-auto">
+        <a href="https://drive.google.com/file/d/16lf-Sunok40I2v7flVub4NthSk8KWHuF/view?usp=drive_link" className="px-8 py-3 bg-blue-500 text-white rounded-full shadow hover:bg-blue-600 transition flex items-center justify-center mx-auto">
           <FaDownload className="mr-2" /> Download Full Resume
         </a>
       </div>
